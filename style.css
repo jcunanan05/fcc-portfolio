@@ -14,3 +14,15 @@
 footer {
   padding: 20px;
 }
+
+.container .intro {
+  background-color: hotpink;
+}
+
+.container .skills {
+  background-color: lightgreen;
+}
+
+.container .contact {
+  background-color: steelblue;
+}
