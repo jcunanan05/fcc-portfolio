@@ -5,10 +5,19 @@
 
 body {
   font-size: 10px;
-  font-family: Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-h1 {
+.intro .banner {
+  padding: 10%;
+  text-align: center;
+}
+
+.banner > h2 {
+  font-size: 5em;
+}
+
+.banner > h3 {
   font-size: 2em;
 }
 
@@ -30,6 +39,7 @@ footer {
 
 .container .intro {
   background-color: hotpink;
+
 }
 
 .container .skills {
