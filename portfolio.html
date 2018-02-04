@@ -2,39 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./style.css">
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-
-  <title>Portfolio</title>
+  <link rel="stylesheet" href="./lib/bulma.css">
+  <link href="./lib/bulma.css.map">
+  <title>Jonathan Cunanan Portfolio</title>
 </head>
-
 <body>
-  <div class="container">
-    <section class="row intro">
-      <div class="banner">
-        <h2>Hello, I am Jonathan</h2>
-        <h3 class="subtitle">web developer.</h3>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <p>Hello</p>
+      </a>
+  
+      <button class="button navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a href="#" class="navbar-item">
+          Home
+        </a>
+        <a href="#" class="navbar-item">
+          Projects
+        </a>
+        <a href="#" class="navbar-item">
+          Contact
+        </a>
       </div>
-    </section>
-    
-    
-    <section class="row skills">
-      <h2>Skills</h2>
-    </section>
-  
-  
-    <section class="row contact">
-      <h2>Contact</h2>
-    </section>
+    </div>
+  </nav>
+
+
+  <!-- content -->
+
+  <div class="container is-fluid">
+    <div class="tile is-ancestor">
+      <div class="tile">
+        <!-- Add content or other tiles -->
+        <p>one</p>
+      </div>
+      <div class="tile">
+        <!-- Add content or other tiles -->
+        <p>two</p>
+      </div>
+    </div>
   </div>
 
 
-  <footer>
-    <p class="text-center">Copyright 2017 &copy Jonathan</p>
-  </footer>
+  <script src="./script.js"></script>
 </body>
-
 </html>
