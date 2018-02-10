@@ -24,13 +24,13 @@
 
     <div class="navbar-menu">
       <div class="navbar-start">
-        <a href="#" class="navbar-item">
-          Home
+        <a href="#me" class="navbar-item">
+          Me
         </a>
-        <a href="#" class="navbar-item">
+        <a href="#projects" class="navbar-item">
           Projects
         </a>
-        <a href="#" class="navbar-item">
+        <a href="#contact" class="navbar-item">
           Contact
         </a>
       </div>
@@ -38,53 +38,143 @@
   </nav>
 
 
-  <!-- content -->
-
-  <div class="container is-fluid">
-    <div class="columns">
+  <!-- body -->
+  <div class="container is-fluid">  
+    <!-- me -->
+    <div id="me" class="columns">
       <div class="column is-8">
         <div class="box">
           <p>content 1</p>
         </div>
       </div>
 
+
       <div class="column is-4">
         <div class="box">
-          <p>content 2</p>
+          <figure class="image is-square">
+            <img src="https://image.flaticon.com/icons/png/512/25/25231.png">
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- projects -->
+    <div id="projects" class="box">
+      <h2>Projects</h2>
+
+      <div class="tile is-ancestor">
+        <div class="tile is-parent is-vertical">
+          <!-- fill 2 projects per section -->
+          <section class="tile is-parent">
+            <article class="tile is-parent">
+              <div class="tile is-child">
+                <p class="title">fCC Tribute Page</p>
+                <p class="subtitle">some content here</p>
+
+                <figure class="is-image is-16by9">
+                  <img src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+                </figure>
+              </div>    
+            </article>
+
+            <article class="tile is-parent">
+              <div class="tile is-child">
+                <p class="title">fCC Tribute Page</p>
+                <p class="subtitle">some content here</p>
+                
+                <figure class="is-image is-16by9">
+                  <img src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+                </figure>
+              </div>    
+            </article>
+          </section>
+
+
+          <section class="tile is-parent">
+            <article class="tile is-parent">
+              <div class="tile is-child">
+                <p class="title">fCC Tribute Page</p>
+                <p class="subtitle">some content here</p>
+
+                <figure class="is-image is-16by9">
+                  <img src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+                </figure>
+              </div>    
+            </article>
+
+            <article class="tile is-parent">
+              <div class="is-child">
+                <p class="title">fCC Tribute Page</p>
+                <p class="subtitle">some content here</p>
+                
+                <figure class="is-image is-16by9">
+                  <img src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+                </figure>
+              </div>    
+            </article>
+          </section>
         </div>
       </div>
     </div>
 
 
-    <div class="columns">
-      <div class="column is-12">
-
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-child notification is-primary">
-              <p>Content 1</p>
-            </div>
-  
-            <div class="tile is-child notification is-primary">
-              <p>Content 1</p>
-            </div>
-  
-            <div class="tile is-child notification is-primary">
-              <p>Content 1</p>
-            </div>
-  
-            <div class="tile is-child notification is-primary">
-              <p>Content 1</p>
-            </div>
-          </div>
+    <!-- test projects -->
+    <div class="box">
+      <h2 class="title">Test Projects</h2>
+    
+      <div class="tile is-ancestor">
+        <div class="tile is-parent is-vertical parentTile">
+          <!-- fill 2 projects per section -->
+          <section class="tile is-parent">
+            <article class="tile is-parent">
+              <div class="tile is-child">
+                <p class="title">fCC Tribute Page</p>
+                <p class="subtitle">some content here</p>
+    
+                <figure class="is-image is-16by9">
+                  <img src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+                </figure>
+              </div>
+            </article>
+    
+            <article class="tile is-parent">
+              <div class="is-child">
+                <p class="title">fCC Tribute Page</p>
+                <p class="subtitle">some content here</p>
+    
+                <figure class="is-image is-16by9">
+                  <img src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+                </figure>
+              </div>
+            </article>
+          </section>
         </div>
+      </div>
+    </div>
 
+    
+
+    
+    <!-- contact -->
+    <div id="contact" class="box">
+      <div class="columns">
+        <div class="column">
+          <h2>Contact</h2>
+        </div>
       </div>
     </div>
   </div>
 
 
 
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>Footer</p>
+      </div>
+    </div>
+  </footer>
 
 
   <script src="./script.js"></script>
