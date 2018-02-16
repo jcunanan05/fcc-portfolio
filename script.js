@@ -33,8 +33,9 @@ var projectUrls = [
 ];
 
 
-
+// event listeners 
 burger.addEventListener('click', toggleBurger);
+
 
 function toggleBurger() {
   menu.classList.toggle('is-active');
@@ -42,20 +43,27 @@ function toggleBurger() {
 
 
 function addAllProjects(projectUrls) {
-  var articles = '';
-  
-  //get all articles in one string
+  var articles = [];
+  var sections = [];
+  var projectsHtml = '';
+
+  //add all projectUrls into an array of articles 
   projectUrls.forEach(projectUrl => {
-    articles += makeArticle(projectUrl);
+    articles.push(makeArticle(projectUrl));
   });
 
-  //put all article into a section
-  projects.innerHTML = 
-  `
-    <section class="tile is-parent">
-      ${articles}
-    </section>
-  `;
+  //add each two of articles to a section
+  for(var i = 0; i < articles.length; i += 2) {
+    sections.push(makeSection(articles[i], articles[i + 1]));
+  }
+
+  //make a combined string of sections
+  sections.forEach(section => {
+    projectsHtml += section;
+  });
+
+  //output HTML
+  projects.innerHTML = projectsHtml;
 }
 
 
@@ -77,5 +85,16 @@ function makeArticle(projectUrl) {
     </article>
   `;
 }
+
+
+function makeSection(articleOne, articleTwo = '') {
+  return `
+    <section class="tile is-parent">
+      ${articleOne}
+      ${articleTwo}
+    </section>
+  `;
+}
+
 
 addAllProjects(projectUrls);
