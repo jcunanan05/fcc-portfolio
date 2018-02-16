@@ -6,13 +6,27 @@ var projectUrls = [
   {
     title: 'fCC Tribute Page',
     subtitle: 'subtitle here',
-    userUrl: 'https://codepen.io/jcunanan05/',
+    userUrl: 'https://codepen.io/jcunanan05',
     slug: 'eWgbwB'
   },
 
   {
     title: 'fCC Tribute Page',
-    subtitle: 'subtitle here',
+    subtitle: 'subtitle two',
+    userUrl: 'https://codepen.io/jcunanan05',
+    slug: 'eWgbwB'
+  },
+
+  {
+    title: 'fCC Tribute Page',
+    subtitle: 'subtitle three',
+    userUrl: 'https://codepen.io/jcunanan05',
+    slug: 'eWgbwB'
+  },
+
+  {
+    title: 'fCC Tribute Page',
+    subtitle: 'subtitle four',
     userUrl: 'https://codepen.io/jcunanan05',
     slug: 'eWgbwB'
   },
@@ -27,25 +41,41 @@ function toggleBurger() {
 }
 
 
-function addProject(project) {
+function addAllProjects(projectUrls) {
+  var articles = '';
+  
+  //get all articles in one string
+  projectUrls.forEach(projectUrl => {
+    articles += makeArticle(projectUrl);
+  });
+
+  //put all article into a section
   projects.innerHTML = 
   `
     <section class="tile is-parent">
-      <article class="tile is-parent">
-        <div class="tile is-child">
-          <p class="title">${project.title}</p>
-          <p class="subtitle">${project.subtitle}</p>
-
-          <figure class="is-image is-16by9">
-            <a href="${project.userUrl}/full/${project.slug}" target="blank">
-              <img src="${project.userUrl}/pen/${project.slug}/image/small.png">
-            </a>
-          </figure>
-        </div>
-      </article>
+      ${articles}
     </section>
   `;
 }
 
-addProject(projectUrls[0]);
-addProject(projectUrls[1]);
+
+function makeArticle(projectUrl) {
+  if (projectUrl === undefined || projectUrl === '') return '';
+
+  return `
+    <article class="tile is-parent">
+      <div class="is-child">
+        <p class="title">${projectUrl.title}</p>
+        <p class="subtitle">${projectUrl.subtitle}</p>
+
+        <figure class="is-image is-16by9">
+          <a href="${projectUrl.userUrl}/full/${projectUrl.slug}/" target="_blank">
+            <img src="${projectUrl.userUrl}/pen/${projectUrl.slug}/image/small.png">
+          </a>
+        </figure>
+      </div>
+    </article>
+  `;
+}
+
+addAllProjects(projectUrls);
