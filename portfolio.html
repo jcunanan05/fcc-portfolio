@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./lib/bulma.css">
   <link href="./lib/bulma.css.map">
+  <link rel="stylesheet" href="./style.css">
   <title>Jonathan Cunanan Portfolio</title>
 </head>
 <body>
@@ -40,27 +41,27 @@
 
   <!-- body -->
   <div class="container is-fluid">  
-    <!-- me -->
-    <div id="me" class="columns">
-      <div class="column is-8">
-        <div class="box">
-          <p>content 1</p>
-        </div>
-      </div>
+    <!-- me -->    
+    <div id="me" class="box">
+      <div class="tile is-ancestor">
+        <section class="tile is-parent">
+          <div class="tile is-child is-8">
+            <h1 class="title">Jonathan Cunanan</h1>
+          </div>
 
 
-      <div class="column is-4">
-        <div class="box">
-          <figure class="image is-square">
-            <img src="https://image.flaticon.com/icons/png/512/25/25231.png">
-          </figure>
-        </div>
+          <div class="tile is-child is-4">
+            <figure class="image is-square">
+              <img src="https://image.flaticon.com/icons/png/512/25/25231.png">
+            </figure>
+          </div>
+        </section>
       </div>
     </div>
 
 
     <!-- projects -->
-    <div class="box">
+    <div id="projects" class="box">
       <h2 class="title">Projects</h2>
     
       <div class="tile is-ancestor">
@@ -75,11 +76,7 @@
     
     <!-- contact -->
     <div id="contact" class="box">
-      <div class="columns">
-        <div class="column">
-          <h2>Contact</h2>
-        </div>
-      </div>
+      <h1 class="title">Contact</h1>
     </div>
   </div>
 

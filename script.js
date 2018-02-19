@@ -8,28 +8,7 @@ var projectUrls = [
     subtitle: 'subtitle here',
     userUrl: 'https://codepen.io/jcunanan05',
     slug: 'eWgbwB'
-  },
-
-  {
-    title: 'fCC Tribute Page',
-    subtitle: 'subtitle two',
-    userUrl: 'https://codepen.io/jcunanan05',
-    slug: 'eWgbwB'
-  },
-
-  {
-    title: 'fCC Tribute Page',
-    subtitle: 'subtitle three',
-    userUrl: 'https://codepen.io/jcunanan05',
-    slug: 'eWgbwB'
-  },
-
-  {
-    title: 'fCC Tribute Page',
-    subtitle: 'subtitle four',
-    userUrl: 'https://codepen.io/jcunanan05',
-    slug: 'eWgbwB'
-  },
+  }
 ];
 
 
