@@ -5,3 +5,12 @@ html > body {
 #me {
   margin-top: 20px;
 }
+
+nav a.navbar-item:hover, nav button.navbar-burger:hover {
+  background-color: rgba(193, 219, 253, 0.89);
+  color: black;
+}
+
+nav button.navbar-burger {
+  border: none;
+}

@@ -1,6 +1,7 @@
 var burger = document.querySelector('.navbar-burger');
 var menu = document.querySelector('.navbar-menu');
 var projects = document.querySelector('.parentTile');
+var githubAvatar = document.querySelector('.github-avatar');
 
 var projectUrls = [
   {
@@ -10,6 +11,8 @@ var projectUrls = [
     slug: 'eWgbwB'
   }
 ];
+
+githubAvatar.setAttribute("src", "https://avatars1.githubusercontent.com/u/25325842?v=4");
 
 
 // event listeners 
