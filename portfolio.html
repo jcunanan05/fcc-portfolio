@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-fixed-top">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
   <title>Jonathan Cunanan Portfolio</title>
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
         <p>Hello</p>
@@ -44,106 +44,125 @@
 
 
   <!-- banner intro -->
-  <section>
-    <h1 class="title is-1">Hi!</h1>
-    <p class="subtitle is-3">Welcome to my Portfolio Page</p>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1">Hi!</h1>
+        <h2 class="subtitle is-3">Welcome to my Portfolio Page</h2>
+
+        <a href="#me">
+          <figure><img class="image is-32x32" src="./res/arrow.png"></figure>
+        </a>
+      </div>
+
+      
+    </div>
   </section>
 
 
   <!-- bio and short description -->
-  <section>
-    <figure>
-      <img class="image is-round is-128x128" src="./profile.jpg">
-    </figure>
-
-    <h2 class="title">Jonathan</h2>
-    <p class="subtitle">Short description about myself</p>
+  <section id="me" class="section">
+    <div class="container">
+      <figure>
+        <img class="image is-round is-128x128" src="./res/profile.jpg">
+      </figure>
+  
+      <h2 class="title">Jonathan</h2>
+      <p class="subtitle">Short description about myself</p>
+    </div>
   </section>
 
 
   <!-- projects made -->
-  <section>
+  <section id="projects" class="section">
     <h2 class="title is-3">Projects Made</h2>
 
-    <div class="my-projects">
-      <article>
-        <h2 class="title">
-          <a href="https://codepen.io/jcunanan05/full/eWgbwB/">fCC Tribute Page</a>
-        </h2>
-
-        <figure>
-          <a href=""></a>
-          <img class="image" src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
-        </figure>
-
-        <p class="content">This is a front-end exercise project that I made at freeCodeCamp using Bootstrap</p>
-      </article>
+    <div class="container">
+      <div class="my-projects">
+        <article>
+          <h2 class="title">
+            <a href="https://codepen.io/jcunanan05/full/eWgbwB/">fCC Tribute Page</a>
+          </h2>
+  
+          <figure>
+            <a href=""></a>
+            <img class="image" src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+          </figure>
+  
+          <p class="content">This is a front-end exercise project that I made at freeCodeCamp using Bootstrap</p>
+        </article>
+      </div>
     </div>
   </section>
 
 
   <!-- technologies used -->
-  <section>
+  <section id="skills" class="section">
     <h2 class="title is-3">Technologies used to build projects</h2>
 
-    <figure>
-      <img class="image is-128x128" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
-    </figure>
-
-    <figure>
-      <img class="image is-128x128 is-round" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.png">
-    </figure>
-
-    <figure>
-      <img class="image is-128x128" src="https://jgthms.com/web-design-in-4-minutes/bulma.png">
-    </figure>
+    <div class="container">
+      <figure>
+        <img class="image is-128x128" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
+      </figure>
+  
+      <figure>
+        <img class="image is-128x128 is-round" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.png">
+      </figure>
+  
+      <figure>
+        <img class="image is-128x128" src="https://jgthms.com/web-design-in-4-minutes/bulma.png">
+      </figure>
+    </div>
   </section>
 
 
   <!-- more info -->
-  <section>
+  <section id="contact" class="section">
     <h2 class="title is-3">Contact</h2>
 
-    <figure>
-      <img class="image is-128x128" src="https://image.flaticon.com/icons/svg/25/25231.svg">
-
-      <p class="content">Github</p>
-    </figure>
-
-    <figure>
-      <img class="image is-128x128" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png">
-
-      <p class="content">LinkedIn</p>
-    </figure>
-
-    <form>
-      <div class="field">
-        <label class="label" for="name">Name</label>
-        <div class="control">
-          <input class="input" name="name" type="text" placeholder="Enter Name...">
+    <div class="container">
+      <form>
+        <div class="field">
+          <label class="label" for="name">Name</label>
+          <div class="control">
+            <input class="input" name="name" type="text" placeholder="Enter Name...">
+          </div>
         </div>
-      </div>
+    
+        <div class="field">
+          <label class="label" for="email">Email</label>
+          <div class="control">
+            <input class="input" name="email" type="email" placeholder="Enter email...">
+          </div>
+        </div>
   
-      <div class="field">
-        <label class="label" for="email">Email</label>
-        <div class="control">
-          <input class="input" name="email" type="email" placeholder="Enter email...">
+  
+        <div class="field">
+          <label class="label" for="message">Message</label>
+          <div class="control">
+            <textarea class="textarea" name="message" placeholder="Enter message..."></textarea>
+          </div>
         </div>
-      </div>
-
-
-      <div class="field">
-        <label class="label" for="message">Message</label>
+  
+  
         <div class="control">
-          <textarea class="textarea" name="message" placeholder="Enter message..."></textarea>
+          <button class="button is-primary" type="submit">Submit</button>
         </div>
-      </div>
+      </form>
 
 
-      <div class="control">
-        <button class="button is-primary" type="submit">Submit</button>
-      </div>
-    </form>
+      <figure>
+        <img class="image is-128x128" src="https://image.flaticon.com/icons/svg/25/25231.svg">
+  
+        <p class="content">Github</p>
+      </figure>
+  
+      <figure>
+        <img class="image is-128x128" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png">
+  
+        <p class="content">LinkedIn</p>
+      </figure>
+    </div>
   </section>
 
 
