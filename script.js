@@ -1,10 +1,31 @@
 var burger = document.querySelector('.navbar-burger');
 var menu = document.querySelector('.navbar-menu');
 var sections = document.querySelectorAll('section.section');
+var navbarItems = document.querySelectorAll('.navbar-item');  
+var nav = document.querySelector('nav');
 
 
-//debounce calls the function every 20ms
-function debounce(func, wait = 20, immediate = true) {
+// event listeners 
+burger.addEventListener('click', toggleBurger);
+
+navbarItems.forEach(navbarItem => {
+  navbarItem.addEventListener('click', hideBurger);
+});
+
+
+function toggleBurger() {
+  menu.classList.toggle('is-active');
+}
+
+function hideBurger() {
+  if (menu.classList.contains('is-active')) {
+    menu.classList.remove('is-active');
+  }
+}
+
+
+//debounce calls the function every xms
+function debounce(func, wait = 19, immediate = true) {
   var timeout;
 	return function() {
     var context = this, args = arguments;
@@ -19,21 +40,27 @@ function debounce(func, wait = 20, immediate = true) {
 	};
 };
 
-// event listeners 
-burger.addEventListener('click', toggleBurger);
-
-
-function toggleBurger() {
-  menu.classList.toggle('is-active');
-}
-
 
 function checkSlide(e) {
+  var topPosition = window.scrollY;
+  var navbarHeight = nav.clientHeight;
+
   sections.forEach(section => {
+    var sectionIsNear = (topPosition + navbarHeight*4) >= section.offsetTop;
     //client height is the height of the element
-    //scrollY is the position at the top
-    //innerHeight is the height of the viewport
-    console.log(window.innerHeight);
+    //window.scrollY is the position at the top
+    //window.innerHeight is the height of the viewport
+    //offsetTop is the distance from the top to the element
+    // console.log('offsetTop: ' + section.offsetTop);
+    // console.log('scrollY: ' + topPosition);
+
+    if(sectionIsNear) {
+      //add is-active class to a navbar-item
+      var sectionId = '#' + section.getAttribute('id');
+      var navbarItem = document.querySelector(`a[href="${sectionId}"]`);
+
+      navbarItem.classList.add('is-active');
+    }
   });
 }
 
