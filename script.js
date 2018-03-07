@@ -59,7 +59,8 @@ function checkSlide(e) {
       var sectionId = '#' + section.getAttribute('id');
       var navbarItem = document.querySelector(`a[href="${sectionId}"]`);
 
-      navbarItem.classList.add('is-active');
+      //execute if navbarItem exists
+      navbarItem ? navbarItem.classList.add('is-active') : '';
     }
   });
 }

@@ -7,3 +7,15 @@
 .is-round {
   border-radius: 50%;
 }
+
+section#me div img {
+  margin: 0 auto;
+}
+
+div.tool-list figure img {
+  margin: 0 auto; 
+}
+
+#skills > h2 {
+  margin-bottom: 35px;
+}
