@@ -9,25 +9,20 @@
 }
 
 section#me div img {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* div#toolList {
-  display: inline-flex;
-} */
+div#toolList div figure img {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* #skills > h2 {
-  margin-bottom: 35px;
-}  */
+div#socialMedia div figure img {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 div.column p#contactInfo {
   padding: 20px;
 }
-
-/* div#socialMedia {
-  display: inline-flex;
-} */
-
-/* div#socialMedia div.columns div.column {
-  margin: 0 auto;
-} */
