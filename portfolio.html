@@ -62,13 +62,17 @@
 
   <!-- bio and short description -->
   <section id="me" class="section">
-    <div class="container has-text-centered">
-      <figure>
-        <img class="image is-round is-128x128" src="./res/profile.jpg">
-      </figure>
-  
-      <h2 class="title">Jonathan</h2>
-      <p class="subtitle">Short description about myself</p>
+    <div class="container">
+      <div class="columns is-centered is-multiline">
+        <div class="column is-narrow has-text-centered">
+          <figure>
+            <img class="image is-round is-128x128" src="./res/profile.jpg">
+          </figure>
+      
+          <h2 class="title">Jonathan</h2>
+          <p class="subtitle">Short description about myself</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -100,9 +104,9 @@
   <section id="skills" class="section">
     <h2 class="title is-3">Technologies used to build projects</h2>
 
-    <div class="container has-text-centered tool-list">
-      <div class="columns">
-        <div class="column">
+    <div class="container">
+      <div id="toolList" class="columns is-multiline is-centered">
+        <div class="column is-narrow">
           <figure>
             <img class="image is-128x128" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
 
@@ -110,24 +114,24 @@
           </figure>
         </div>
 
-        <div class="column">
+
+        <div class="column is-narrow">
           <figure>
             <img class="image is-128x128 is-round" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.png">
+  
+            <figcaption class="content"><strong>Bootstrap</strong></figcaption>
           </figure>
-
-          <figcaption class="content"><strong>Bootstrap</strong></figcaption>
         </div>
-          
-        <div class="column">
+
+
+        <div class="column is-narrow">
           <figure>
             <img class="image is-128x128" src="https://jgthms.com/web-design-in-4-minutes/bulma.png">
-
+  
             <figcaption class="content"><strong>Bulma</strong></figcaption>
           </figure>
         </div>
       </div>
-  
-  
     </div>
   </section>
 
@@ -137,54 +141,75 @@
     <h2 class="title is-3">Contact</h2>
 
     <div class="container">
-      <form>
-        <div class="field">
-          <label class="label" for="name">Name</label>
-          <div class="control">
-            <input class="input" name="name" type="text" placeholder="Enter Name...">
-          </div>
+      <div class="columns">
+        <div class="column">
+          <form>
+            <div class="field">
+              <label class="label" for="name">Name</label>
+              <div class="control">
+                <input class="input" name="name" type="text" placeholder="Enter Name...">
+              </div>
+            </div>
+        
+            <div class="field">
+              <label class="label" for="email">Email</label>
+              <div class="control">
+                <input class="input" name="email" type="email" placeholder="Enter email...">
+              </div>
+            </div>
+      
+      
+            <div class="field">
+              <label class="label" for="message">Message</label>
+              <div class="control">
+                <textarea class="textarea" name="message" placeholder="Enter message..."></textarea>
+              </div>
+            </div>
+      
+      
+            <div class="control">
+              <button class="button is-primary" type="submit">Submit</button>
+            </div>
+          </form>
         </div>
-    
-        <div class="field">
-          <label class="label" for="email">Email</label>
-          <div class="control">
-            <input class="input" name="email" type="email" placeholder="Enter email...">
-          </div>
+
+        <div class="column">
+          <p id="contactInfo" class="content is-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, nam est obcaecati, consectetur odio ipsum laudantium quibusdam atque animi consequuntur quae. Porro nesciunt odio dignissimos cupiditate maxime, illo quibusdam. Optio.</p>
         </div>
-  
-  
-        <div class="field">
-          <label class="label" for="message">Message</label>
-          <div class="control">
-            <textarea class="textarea" name="message" placeholder="Enter message..."></textarea>
-          </div>
-        </div>
-  
-  
-        <div class="control">
-          <button class="button is-primary" type="submit">Submit</button>
-        </div>
-      </form>
+      </div>
     </div>
   </section>
 
 
   <section id="social" class="section">
     <div class="columns">
-      <div class="column">
-        <figure>
-          <img class="image is-128x128" src="https://image.flaticon.com/icons/svg/25/25231.svg">
-    
-          <p class="content">Github</p>
-        </figure>
+      <div class="column content has-text-centered">
+        <h3>
+          Made by <br /> 
+          Jonathan Cunanan
+        </h3>
       </div>
+      
 
       <div class="column">
-        <figure>
-          <img class="image is-128x128" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png">
-    
-          <p class="content">LinkedIn</p>
-        </figure>
+        <div id="socialMedia" class="columns is-multiline is-centered">
+          <div class="column is-narrow">
+            <figure>
+              <img class="image is-32x32" src="https://image.flaticon.com/icons/svg/25/25231.svg">
+            </figure>
+          </div>
+
+
+          <div class="column is-narrow">
+            <figure>
+              <img class="image is-32x32" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png">
+            </figure>
+          </div>
+        </div> 
+        <!-- <div class="tile is-ancestor">
+          <div class="tile is-parent">
+          </div>
+        </div> -->
       </div>
     </div>
 

@@ -12,10 +12,22 @@ section#me div img {
   margin: 0 auto;
 }
 
-div.tool-list figure img {
-  margin: 0 auto; 
+/* div#toolList {
+  display: inline-flex;
+} */
+
+/* #skills > h2 {
+  margin-bottom: 35px;
+}  */
+
+div.column p#contactInfo {
+  padding: 20px;
 }
 
-#skills > h2 {
-  margin-bottom: 35px;
-}
+/* div#socialMedia {
+  display: inline-flex;
+} */
+
+/* div#socialMedia div.columns div.column {
+  margin: 0 auto;
+} */
