@@ -26,3 +26,7 @@ div#socialMedia div figure img {
 div.column p#contactInfo {
   padding: 20px;
 }
+
+a.is-active {
+  background-color: red !important;
+}

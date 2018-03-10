@@ -1,6 +1,6 @@
 var burger = document.querySelector('.navbar-burger');
 var menu = document.querySelector('.navbar-menu');
-var sections = document.querySelectorAll('section.section');
+var sections = document.querySelectorAll('body > section');
 var navbarItems = document.querySelectorAll('.navbar-item');  
 var nav = document.querySelector('nav');
 
@@ -47,6 +47,7 @@ function checkSlide(e) {
 
   sections.forEach(section => {
     var sectionIsNear = (topPosition + navbarHeight*4) >= section.offsetTop;
+    var sectionPassedBy = (topPosition + navbarHeight*4) >= (section.offsetTop + section.clientHeight);
     //client height is the height of the element
     //window.scrollY is the position at the top
     //window.innerHeight is the height of the viewport
@@ -61,6 +62,15 @@ function checkSlide(e) {
 
       //execute if navbarItem exists
       navbarItem ? navbarItem.classList.add('is-active') : '';
+    }
+
+    if(sectionPassedBy) {
+      //add is-active class to a navbar-item
+      var sectionId = '#' + section.getAttribute('id');
+      var navbarItem = document.querySelector(`a[href="${sectionId}"]`);
+
+      //execute if navbarItem exist
+      navbarItem ? navbarItem.classList.remove('is-active') : '';
     }
   });
 }
