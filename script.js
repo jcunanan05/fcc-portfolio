@@ -41,45 +41,32 @@ function debounce(func, wait = 19, immediate = true) {
 function checkSlide(e) {
   var topPosition = window.scrollY;
   var navbarHeight = nav.clientHeight;
-  console.log(`navbarHeight = ${navbarHeight}`);
+  var navbarPosition = topPosition + navbarHeight;
+  // console.log(`navbarHeight = ${navbarHeight}`);
+  //client height is the height of the element
+  //window.scrollY is the position at the top
+  //window.innerHeight is the height of the viewport
+  //offsetTop is the distance from the top to the element
+  // console.log('offsetTop: ' + section.offsetTop);
+  // console.log('scrollY: ' + topPosition);
 
   sections.forEach(section => {
     var sectionId = "#" + section.getAttribute("id");
-    console.log(`\nsectionId = ${sectionId}`);
-    var sectionIsNear = topPosition + navbarHeight * 4 >= section.offsetTop;
-    console.log(`topPosition = ${topPosition}, section.offsettop = ${section.offsetTop}`);
-    var sectionPassedBy =
-      topPosition + navbarHeight * 4 >=
-      section.offsetTop + section.clientHeight;
-    console.log(`section.clientHeight = ${section.clientHeight}`);
-    console.log(`sectionIsNear = ${sectionIsNear}, sectionPassedBy = ${sectionPassedBy}`);
-    //client height is the height of the element
-    //window.scrollY is the position at the top
-    //window.innerHeight is the height of the viewport
-    //offsetTop is the distance from the top to the element
-    // console.log('offsetTop: ' + section.offsetTop);
-    // console.log('scrollY: ' + topPosition);
-
+    var sectionHeight = section.offsetTop + section.clientHeight;
+    var sectionIsPassingBy = 
+      navbarPosition >= section.offsetTop && 
+      navbarPosition <= sectionHeight;
     var navbarItem = document.querySelector(`a[href="${sectionId}"]`);
-    console.log(`navBarItem = ${navbarItem}`);
+
     // deactiviate it here for a test before any activation
     navbarItem ? navbarItem.classList.remove("is-active") : "";
 
-    if (sectionIsNear) {
+    if (sectionIsPassingBy) {
       //add is-active class to a navbar-item
-
       //execute if navbarItem exists
       navbarItem ? navbarItem.classList.add("is-active") : "";
     }
-
-    if (sectionPassedBy) {
-      //add is-active class to a navbar-item
-
-      //execute if navbarItem exist
-      navbarItem ? navbarItem.classList.remove("is-active") : "";
-    }
   });
-  console.log("-------------------------------");
 }
 
 window.addEventListener("scroll", checkSlide);
