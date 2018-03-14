@@ -27,6 +27,11 @@ div.column p#contactInfo {
   padding: 20px;
 }
 
-a.is-active {
+
+/* body > nav.navbar {
+  background-color: red;
+} */
+
+/* a.is-active {
   background-color: red !important;
-}
+} */

@@ -10,34 +10,36 @@
   <title>Jonathan Cunanan Portfolio</title>
 </head>
 <body>
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <p>Hello</p>
-      </a>
+  <nav class="navbar is-fixed-top is-info" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <p>Hello</p>
+        </a>
+    
+        <button class="button navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
   
-      <button class="button navbar-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-
-    <div class="navbar-menu">
-      <div class="navbar-start">
-        <a href="#me" class="navbar-item">
-          About Me
-        </a>
-        <a href="#projects" class="navbar-item">
-          Projects
-        </a>
-        <a href="#skills" class="navbar-item">
-          Skills
-        </a>
-        <a href="#contact" class="navbar-item">
-          Contact
-        </a>
+  
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <a href="#me" class="navbar-item">
+            About Me
+          </a>
+          <a href="#projects" class="navbar-item">
+            Projects
+          </a>
+          <a href="#skills" class="navbar-item">
+            Skills
+          </a>
+          <a href="#contact" class="navbar-item">
+            Contact
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -86,22 +88,26 @@
 
   <!-- projects made -->
   <section id="projects" class="section">
-    <h2 class="title is-3">Projects Made</h2>
-
     <div class="container">
-      <div class="my-projects">
-        <article>
-          <h2 class="title">
-            <a href="https://codepen.io/jcunanan05/full/eWgbwB/">fCC Tribute Page</a>
-          </h2>
+      <h2 class="title is-3">Projects Made</h2>
   
-          <figure>
-            <a href=""></a>
-            <img class="image" src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
-
-            <figcaption>This is a front-end exercise project that I made at freeCodeCamp using Bootstrap</figcaption>
-          </figure>
-        </article>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-third my-projects">
+            <article>
+              <h2 class="title">
+                <a href="https://codepen.io/jcunanan05/full/eWgbwB/">fCC Tribute Page</a>
+              </h2>
+      
+              <figure>
+                <a href=""></a>
+                <img class="image" src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
+    
+                <figcaption>This is a front-end exercise project that I made at freeCodeCamp using Bootstrap</figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -109,34 +115,36 @@
 
   <!-- technologies used -->
   <section id="skills" class="section">
-    <h2 class="title is-3">Technologies used to build projects</h2>
-
-    <div class="container has-text-centered">
-      <div id="toolList" class="columns is-multiline is-centered">
-        <div class="column is-narrow">
-          <figure>
-            <img class="image is-128x128" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
-
-            <figcaption class="content"><strong>Node</strong></figcaption>
-          </figure>
-        </div>
-
-
-        <div class="column is-narrow">
-          <figure>
-            <img class="image is-128x128 is-round" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.png">
+    <div class="container">
+      <h2 class="title is-3">Technologies used to build projects</h2>
   
-            <figcaption class="content"><strong>Bootstrap</strong></figcaption>
-          </figure>
-        </div>
-
-
-        <div class="column is-narrow">
-          <figure>
-            <img class="image is-128x128" src="https://jgthms.com/web-design-in-4-minutes/bulma.png">
+      <div class="container has-text-centered">
+        <div id="toolList" class="columns is-multiline is-centered">
+          <div class="column is-narrow">
+            <figure>
+              <img class="image is-128x128" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
   
-            <figcaption class="content"><strong>Bulma</strong></figcaption>
-          </figure>
+              <figcaption class="content"><strong>Node</strong></figcaption>
+            </figure>
+          </div>
+  
+  
+          <div class="column is-narrow">
+            <figure>
+              <img class="image is-128x128 is-round" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.png">
+    
+              <figcaption class="content"><strong>Bootstrap</strong></figcaption>
+            </figure>
+          </div>
+  
+  
+          <div class="column is-narrow">
+            <figure>
+              <img class="image is-128x128" src="https://jgthms.com/web-design-in-4-minutes/bulma.png">
+    
+              <figcaption class="content"><strong>Bulma</strong></figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
@@ -145,43 +153,45 @@
 
   <!-- more info -->
   <section id="contact" class="section">
-    <h2 class="title is-3">Contact</h2>
-
     <div class="container">
-      <div class="columns">
-        <div class="column">
-          <form>
-            <div class="field">
-              <label class="label" for="name">Name</label>
-              <div class="control">
-                <input class="input" name="name" type="text" placeholder="Enter Name...">
+      <h2 class="title is-3">Contact</h2>
+  
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <form>
+              <div class="field">
+                <label class="label" for="name">Name</label>
+                <div class="control">
+                  <input class="input" name="name" type="text" placeholder="Enter Name...">
+                </div>
               </div>
-            </div>
+          
+              <div class="field">
+                <label class="label" for="email">Email</label>
+                <div class="control">
+                  <input class="input" name="email" type="email" placeholder="Enter email...">
+                </div>
+              </div>
         
-            <div class="field">
-              <label class="label" for="email">Email</label>
-              <div class="control">
-                <input class="input" name="email" type="email" placeholder="Enter email...">
+        
+              <div class="field">
+                <label class="label" for="message">Message</label>
+                <div class="control">
+                  <textarea class="textarea" name="message" placeholder="Enter message..."></textarea>
+                </div>
               </div>
-            </div>
-      
-      
-            <div class="field">
-              <label class="label" for="message">Message</label>
+        
+        
               <div class="control">
-                <textarea class="textarea" name="message" placeholder="Enter message..."></textarea>
+                <button class="button is-primary" type="submit">Submit</button>
               </div>
-            </div>
-      
-      
-            <div class="control">
-              <button class="button is-primary" type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
-
-        <div class="column">
-          <p id="contactInfo" class="content is-medium">Questions, inquirires, or anything you want to share with me? Just fill this form out! :)</p>
+            </form>
+          </div>
+  
+          <div class="column">
+            <p id="contactInfo" class="content is-medium">Questions, inquirires, or anything you want to share with me? Just fill this form out! :)</p>
+          </div>
         </div>
       </div>
     </div>
@@ -232,7 +242,6 @@
         </div> 
       </div>
     </div>
-
   </section>
 
 
