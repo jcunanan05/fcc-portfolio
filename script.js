@@ -118,7 +118,6 @@ var Portfolio = function() {
     projects.forEach((project, i) => {
       // for every 3 proj new line
       var newColumn = ((i + 1) % 3) === 0;
-      console.log(newColumn)
   
       //loop all column
       rowString.push(`
