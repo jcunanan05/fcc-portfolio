@@ -10,28 +10,28 @@ var Portfolio = function() {
     {
       title: 'fCC Tribute Page',
       url: 'https://codepen.io/jcunanan05/full/eWgbwB/',
-      imageUrl: 'https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png',
+      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/tribute-page.PNG?raw=true',
       description: 'This is a front-end exercise project that I made at freeCodeCamp using Bootstrap.'
     },
 
     {
       title: 'Color Game',
       url: 'https://codepen.io/jcunanan05/full/gzrjdq',
-      imageUrl: 'https://codepen.io/jcunanan05/pen/gzrjdq/image/small.png',
+      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/color-game.PNG?raw=true',
       description: 'This is a front-end game that enhances your understanding on how Red Blue and Green affects color mixes. This uses jQuery library as well as plain CSS for styling.'
     },
 
     {
       title: 'fCC Random Quote Machine',
       url: 'https://codepen.io/jcunanan05/full/yKaoRm',
-      imageUrl: 'https://codepen.io/jcunanan05/pen/yKaoRm/image/small.png',
+      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/random-quote.PNG?raw=true',
       description: 'This is a front-end challenge that uses random quote API to deliver random quotes. It uses plain CSS with flexbox to practice responsive web design skills and also generate random colors.'
     },
 
     {
       title: 'Monster Slayer',
       url: 'https://codepen.io/jcunanan05/full/depBJN',
-      imageUrl: 'https://s.codepen.io/jcunanan05/fullcpgrid/depBJN',
+      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/monster-slayer.png?raw=true',
       description: 'Front-end mini project that uses Vue, a framework for progressive javascript apps. Vue watches over the values and updates it real-time, making it the only source of truth.'
     }
   ];
