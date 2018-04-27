@@ -26,6 +26,13 @@ var Portfolio = function() {
       url: 'https://codepen.io/jcunanan05/full/yKaoRm',
       imageUrl: 'https://codepen.io/jcunanan05/pen/yKaoRm/image/small.png',
       description: 'This is a front-end challenge that uses random quote API to deliver random quotes. It uses plain CSS with flexbox to practice responsive web design skills and also generate random colors.'
+    },
+
+    {
+      title: 'Monster Slayer',
+      url: 'https://codepen.io/jcunanan05/full/depBJN',
+      imageUrl: 'https://s.codepen.io/jcunanan05/fullcpgrid/depBJN',
+      description: 'Front-end mini project that uses Vue, a framework for progressive javascript apps. Vue watches over the values and updates it real-time, making it the only source of truth.'
     }
   ];
 
@@ -39,12 +46,9 @@ var Portfolio = function() {
     navbarItem.addEventListener("click", hideBurger);
   });
 
-  projects.forEach((project, i) => {
-    // for every 3 proj new line
-    var projectString = '';
+  //build projects section
+  makeProjectString();
 
-    
-  });
 
   function toggleBurger() {
     menu.classList.toggle("is-active");
@@ -103,6 +107,61 @@ var Portfolio = function() {
         navbarItem ? navbarItem.classList.add("is-active") : "";
       }
     });
+  }
+
+  //build the projectsContainer
+  function makeProjectString() {
+    var projectsString = [];
+    var rowString = [];
+
+    //loop the project Object
+    projects.forEach((project, i) => {
+      // for every 3 proj new line
+      var newColumn = ((i + 1) % 3) === 0;
+      console.log(newColumn)
+  
+      //loop all column
+      rowString.push(`
+        ${makeColumn(project)}
+      `);
+
+      //if new column
+      if(newColumn) {
+        projectsString.push(`<div class="columns">${rowString.join('')}</div>`);
+        //reset rowString
+        rowString = [];
+      }
+
+      //if end of array
+      if(i === projects.length - 1) {
+        projectsString.push(`<div class="columns">${rowString.join('')}</div>`);
+      }
+    });
+
+    //build the string
+    projectsContainer.innerHTML = `
+      ${projectsString.join('')}
+    `;
+  }
+
+  //get object and return a html string of project
+  function makeColumn(project) {
+    return `
+      <div class="column is-one-third my-projects">
+        <article>
+          <h2 class="title">
+            <a href="${project.url}">${project.title}</a>
+          </h2>
+
+          <figure>
+            <a href="${project.url}"></a>
+            <img class="image" src="${project.imageUrl}">
+
+            <figcaption class="has-text-centered">${project.description}</figcaption>
+          </figure>
+        </article>
+      </div>
+    `;
   }
 };
 
