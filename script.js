@@ -150,7 +150,7 @@ var Portfolio = function() {
       <div class="column is-one-third my-projects">
         <article>
           <h2 class="title">
-            <a href="${project.url}">${project.title}</a>
+            <a href="${project.url}" target="_blank">${project.title}</a>
           </h2>
 
           <figure>
