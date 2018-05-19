@@ -24,7 +24,7 @@ var Portfolio = function() {
     {
       title: 'fCC Random Quote Machine',
       url: 'https://codepen.io/jcunanan05/full/yKaoRm',
-      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/random-quote.PNG?raw=true',
+      imageUrl: 'https://raw.githubusercontent.com/jcunanan05/random-quote-machine/master/resources/sshot.PNG',
       description: 'This is a front-end challenge that uses random quote API to deliver random quotes. It uses plain CSS with flexbox to practice responsive web design skills and also generate random colors.'
     },
 
