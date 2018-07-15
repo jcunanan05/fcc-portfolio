@@ -1,0 +1,73 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+/* basic css resetting */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+/* global css variable colors */
+:root {
+  --default-blue: #2196f3;
+  --default-purple: #9c27b0;
+}
+
+/* remove styling for the links and replace by a pleasant colored one */
+a {
+  text-decoration: none;
+  color: var(--default-blue, #2196f3);
+}
+
+a:visited {
+  color: var(--default-purple, #9c27b0);
+}
+
+/* wrappers for full flex / grid layout */
+.wrapper--flex {
+  display: flex;
+  min-height: 100vh;
+}
+
+.wrapper__child--flex {
+  flex: 1;
+}
+
+/* body elements to style */
+.main {
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: #e0e0e0;
+  padding: 2em 4em;
+}
+
+/* some helper / utility classes */
+.container {
+  max-width: 60em;
+  width: 100%;
+}
+
+.has-text-center {
+  text-align: center;
+}
+
+/* all elements that contains grid in it */
+@supports (display: grid) {
+  .wrapper--grid {
+    display: grid;
+  }
+
+  .main {
+    display: grid;
+  }
+}
