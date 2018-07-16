@@ -13,6 +13,8 @@ body {
   min-height: 100vh;
   width: 100%;
   font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* global css variable colors */
@@ -43,12 +45,94 @@ a:visited {
 
 /* body elements to style */
 .main {
-  min-height: 100vh;
+  
 }
 
+/* all concerning the header */
+.header {
+  display: grid;
+  height: 100vh;
+  max-height: 50rem;
+}
+
+.header__section {
+  margin: 0 1rem;
+}
+
+.header__title {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.header__image {
+  display: block;
+  width: 66%;
+  min-width: 10em;
+  max-width: 16em;
+  margin-top: 3em;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px 2px rgba(10, 10, 10, 0.12);
+}
+
+.header__description {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.17em;
+  line-height: 1.5rem;
+}
+
+/* all navbar details */
+.navbar {
+  width: 100%;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0 0 0.5em 0;
+}
+
+.navbar__list li {
+  margin: 0 4vw;
+  border-radius: 50%;
+  box-shadow: 
+    0px 0px 1px 1px rgba(10, 10, 10, 0.4), 
+    -2px 3px 1px 0px rgba(10, 10, 10, 0.14);
+}
+
+.navbar-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4em;
+}
+
+/* section details */
+.section {
+  padding: 2em 1em;
+}
+
+.section__title {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+/* projects section */
+.project-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* all the footer details */
 .footer {
   background-color: #e0e0e0;
   padding: 2em 4em;
+}
+
+.footer__container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* some helper / utility classes */
@@ -61,6 +145,17 @@ a:visited {
   text-align: center;
 }
 
+.is-hidden {
+  display: none;
+}
+
+/* breakpoints */
+@media screen and (min-width: 480px) {
+  .section {
+    padding: 2em 2em;
+  }
+}
+
 /* all elements that contains grid in it */
 @supports (display: grid) {
   .wrapper--grid {
@@ -68,6 +163,41 @@ a:visited {
   }
 
   .main {
+    justify-self: center;
     display: grid;
+    justify-items: center;
+  }
+
+
+  /* all the header layouting */
+  .header {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: min-content min-content min-content auto;
+    grid-gap: 0.4em;
+    grid-auto-rows: auto;
+  }
+
+  .header__image {
+    grid-row: 1 / 2;
+    grid-column: 1 / span 12;
+    align-self: end;
+  }
+  
+  .header__title {
+    grid-row: 2 / 3;
+    grid-column: 1 / span 12;
+  }
+  
+  .header__description {
+    grid-row: 3 / 4;
+    grid-column: 1 / span 12;
+  }
+
+  .navbar {
+    grid-row: 4 / 5;
+    grid-column: 1 / span 12;
+    align-self: end;
   }
 }

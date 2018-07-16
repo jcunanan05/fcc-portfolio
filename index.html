@@ -10,17 +10,50 @@
 <body>
   <div class="wrapper--flex">
     <div class="wrapper__child--flex wrapper--grid">
-      <main class="main">
-        <header class="header">
-          <h1 class="header__title">Jonathan Cunanan</h1>
-          <img src="https://avatars1.githubusercontent.com/u/25325842?s=460&v=4" alt="picture of Jonathan Albert Cunanan">
-          <p class="header__description">
+      <main class="main container">
+        <header class="header container">
+          <h1 class="header__title has-text-center header__section ">Jonathan Cunanan</h1>
+          <img class="header__image header__section" src="https://avatars1.githubusercontent.com/u/25325842?s=460&v=4" alt="picture of Jonathan Albert Cunanan">
+          <p class="header__description has-text-center header__section">
             Web Developer, with a passion for programming. <br>
             Constantly searching for solutions <br>
             Learner, and will always be <br>
             💻 ❤️
           </p>
+
+          <nav class="navbar header__section">
+            <ul class="navbar__list">
+              <li><a class="navbar-link" href="#projects">
+                <p class="navbar-link__title is-hidden">Projects</p>
+                <img src="https://png.icons8.com/dusk/50/000000/edit.png" alt="pencil icon">
+              </a></li>
+              <li><a class="navbar-link" href="#tools">
+                <p class="navbar-link__title is-hidden">Tools</p>
+                <img src="https://png.icons8.com/dusk/50/000000/maintenance.png" alt="wrench and screw icon">
+              </a></li>
+              <li><a class="navbar-link" href="#about">
+                <p class="navbar-link__title is-hidden">About</p>
+                <img src="https://png.icons8.com/dusk/50/000000/human-head.png" alt="head icon">
+              </a></li>
+            </ul>
+          </nav>
         </header>
+
+        <section id="projects" class="projects section container js-section">
+          <h2 class="section__title">
+            Projects <i class="fas fa-pencil-alt"></i>
+          </h2>
+
+          <ul class="project-list">
+            <li>
+              <h3 class="project__title">Random Quote Machine</h3>
+              <img src="" alt="Random quote machine screenshot">
+              <p class="project__description">
+                This is project made to play with react. Had lots of fun making components and keeping the data state in sync with the UI!
+              </p>
+            </li>
+          </ul>
+        </section>
       </main>
 
       <footer class="footer">
@@ -30,5 +63,8 @@
       </footer>
     </div>
   </div>
+
+  <script src="script.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </body>
 </html>
