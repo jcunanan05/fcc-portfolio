@@ -8,31 +8,24 @@ var Portfolio = function() {
   //don't judge, no database for now ok. =))
   var projects = [
     {
-      title: 'fCC Tribute Page',
-      url: 'https://codepen.io/jcunanan05/full/eWgbwB/',
-      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/tribute-page.PNG?raw=true',
-      description: 'This is a front-end exercise project that I made at freeCodeCamp using Bootstrap.'
+      title: 'Survey Form Challenge',
+      url: 'https://codepen.io/jcunanan05/full/ERKmYg',
+      imageUrl: 'res/survey.PNG',
+      description: 'This is a Responsive Web Design Challenge, all in CSS! Enjoyed some mind-bending problems here like making a google form clone.'
     },
 
     {
       title: 'Color Game',
       url: 'https://codepen.io/jcunanan05/full/gzrjdq',
-      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/color-game.PNG?raw=true',
+      imageUrl: 'res/color-game.PNG',
       description: 'This is a front-end game that enhances your understanding on how Red Blue and Green affects color mixes. This uses jQuery library as well as plain CSS for styling.'
     },
 
     {
       title: 'fCC Random Quote Machine',
-      url: 'https://codepen.io/jcunanan05/full/yKaoRm',
-      imageUrl: 'https://raw.githubusercontent.com/jcunanan05/random-quote-machine/master/resources/sshot.PNG',
-      description: 'This is a front-end challenge that uses random quote API to deliver random quotes. It uses plain CSS with flexbox to practice responsive web design skills and also generate random colors.'
-    },
-
-    {
-      title: 'Monster Slayer',
-      url: 'https://codepen.io/jcunanan05/full/depBJN',
-      imageUrl: 'https://github.com/jcunanan05/fcc-portfolio/blob/master/res/monster-slayer.png?raw=true',
-      description: 'Front-end mini project that uses Vue, a framework for progressive javascript apps. Vue watches over the values and updates it real-time, making it the only source of truth.'
+      url: 'https://jcunanan05-random-quote.netlify.com/',
+      imageUrl: 'res/random-quote.PNG',
+      description: 'This is a front-end challenge that uses random quote API to deliver random quotes. I had fun rewriting effects, color transitions, in react!!'
     }
   ];
 
