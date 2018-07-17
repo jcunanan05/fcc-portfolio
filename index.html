@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/autoprefix.css">
   <title>Jonathan Cunanan Portfolio</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
       <main class="main container">
         <header class="header container">
           <h1 class="header__title has-text-center header__section ">Jonathan Cunanan</h1>
-          <img class="header__image header__section" src="https://avatars1.githubusercontent.com/u/25325842?s=460&v=4" alt="picture of Jonathan Albert Cunanan">
+          <img class="header__image is-rounded header__section" src="https://avatars1.githubusercontent.com/u/25325842?s=460&v=4" alt="picture of Jonathan Albert Cunanan">
           <p class="header__description has-text-center header__section">
             Web Developer, with a passion for programming. <br>
             Constantly searching for solutions <br>
@@ -22,16 +22,16 @@
           </p>
 
           <nav class="navbar header__section">
-            <ul class="navbar__list">
-              <li><a class="navbar-link" href="#projects">
+            <ul class="navbar__list has-no-bullet">
+              <li><a class="navbar-link js-navbar-link" href="#projects">
                 <p class="navbar-link__title is-hidden">Projects</p>
                 <img src="https://png.icons8.com/dusk/50/000000/edit.png" alt="pencil icon">
               </a></li>
-              <li><a class="navbar-link" href="#tools">
+              <li><a class="navbar-link js-navbar-link" href="#tools">
                 <p class="navbar-link__title is-hidden">Tools</p>
                 <img src="https://png.icons8.com/dusk/50/000000/maintenance.png" alt="wrench and screw icon">
               </a></li>
-              <li><a class="navbar-link" href="#about">
+              <li><a class="navbar-link js-navbar-link" href="#about">
                 <p class="navbar-link__title is-hidden">About</p>
                 <img src="https://png.icons8.com/dusk/50/000000/human-head.png" alt="head icon">
               </a></li>
@@ -39,26 +39,101 @@
           </nav>
         </header>
 
-        <section id="projects" class="projects section container js-section">
+        <section id="projects" class="projects section container">
           <h2 class="section__title">
             Projects <i class="fas fa-pencil-alt"></i>
           </h2>
 
-          <ul class="project-list">
-            <li>
-              <h3 class="project__title">Random Quote Machine</h3>
-              <img src="" alt="Random quote machine screenshot">
+          <ul class="project__list has-no-bullet">
+            <li class="project__item">
+              <h3 class="project__title">
+                <a href="https://jcunanan05-random-quote.netlify.com/" target="_blank" rel="noopener noreferrer">Random Quote Machine</a>
+              </h3>
+              <img class="project__image" src="images/random-quote.PNG" alt="Random quote machine screenshot">
               <p class="project__description">
-                This is project made to play with react. Had lots of fun making components and keeping the data state in sync with the UI!
+                This is project made to play with react. Had lots of fun making components, producing random colors, and keeping the data state in sync with the UI! Used CSS Framework called Bulma!
+              </p>
+            </li>
+
+            <li class="project__item">
+              <h3 class="project__title">
+                <a href="https://jcunanan05-technical-documentation.glitch.me/" target="_blank" rel="noopener noreferrer">Technical Docs Challenge</a>
+              </h3>
+              <img class="project__image" src="images/tech-doc.PNG" alt="Technical Docs Challenge screenshot">
+              <p class="project__description">
+                CSS Responsive Web Design Challenge!! Had fun doing typography, making a mobile and desktop layout, all in pure CSS! Learned flexbox, visual hierarchy, and semantics!!
+              </p>
+            </li>
+
+            <li class="project__item">
+              <h3 class="project__title">
+                <a href="https://jcunanan05-technical-documentation.glitch.me/" target="_blank" rel="noopener noreferrer">My Portfolio</a>
+              </h3>
+              <img class="project__image" src="images/portfolio.PNG" alt="Portfolio screenshot">
+              <p class="project__description">
+                Of course, where can I show my projects without this portfolio site!! Had an amazing time exploring new techonlogies like CSS grid, feature queries, also with a little bit of flexbox! 
               </p>
             </li>
           </ul>
+        </section>
+
+        <section id="tools" class="tools section container">
+          <h2 class="section__title">
+            Tools <i class="fas fa-screwdriver"></i> that I have used!
+          </h2>
+
+          <ul class="tool__list has-no-bullet js-tool__list">
+            <li class="tool__item">
+              <h3 class="tool__title is-hidden">
+                CSS3
+              </h3>
+              <img class="tool__image is-rounded" src="http://www.myiconfinder.com/uploads/iconsets/256-256-8b61de4c84033266e15317a6eb9fda2d-css3.png" alt="Icon of CSS3">
+            </li>
+          </ul>
+        </section>
+
+        <section id="about" class="about section container">
+          <h2 class="section__title">
+            About Me <i class="far fa-smile-beam"></i>
+          </h2>
+
+          <section class="about__info">
+            <h3 class="info__title">
+              <a href="https://github.com/jcunanan05" target="_blank" rel="noopener noreferrer">@jcunanan05</a>
+            </h3>
+
+            <img class="info__image is-rounded" src="https://avatars1.githubusercontent.com/u/25325842?s=460&v=4" alt="picture of Jonathan Albert Cunanan">
+
+            <p class="info__description">
+              Hi, I'm Jonathan and I study web development and I like it so much! I am always excited about techonlogies in web! 
+            </p>
+
+            <ul class="social-media__list has-no-bullet">
+              <li class="social-media__item">
+                <a href="https://github.com/jcunanan05" target="_blank" rel="noopener noreferrer">
+                  <img class="social-media__image" src="https://image.flaticon.com/icons/svg/25/25231.svg">
+                </a>
+              </li>
+
+              <li class="social-media__item">
+                <a href="https://www.linkedin.com/in/cunananjonathan/" target="_blank" rel="noopener noreferrer">
+                  <img class="social-media__image" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png">
+                </a>
+              </li>
+
+              <li class="social-media__item">
+                <a href="https://www.freecodecamp.org/jcunanan05" target="_blank" rel="noopener noreferrer">
+                  <img class="social-media__image" src="https://avatars0.githubusercontent.com/u/9892522?s=400&amp;v=4">
+                </a>
+              </li>
+            </ul>
+          </section>
         </section>
       </main>
 
       <footer class="footer">
         <div class="footer__container container has-text-center">
-          Copyright &copy; 2018. All rights reserved. Made by <a href="https://github.com/jcunanan05">Jonathan Cunanan.</a>
+          Copyright &copy; 2018. All rights reserved. Made by <a href="https://github.com/jcunanan05" target="_blank" rel="noopener noreferrer">Jonathan Cunanan.</a>
         </div>
       </footer>
     </div>
