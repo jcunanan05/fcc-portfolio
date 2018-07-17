@@ -17,3 +17,4 @@ Hello this is a front-end web projects or challenges that offered by freeCodeCam
 * *cursor: pointer* for mouse cursor styling
 * removing styling from inputs by *outline: none*
 * Making box shadow
+* Use of ```grid-auto-flow```

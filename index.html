@@ -1,152 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" class="has-fixed-top">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="lib/bulma.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/autoprefix.css">
   <title>Jonathan Cunanan Portfolio</title>
 </head>
 <body>
-  <nav class="navbar is-fixed-top is-info" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <p>Hello</p>
-        </a>
-    
-        <button class="button navbar-burger is-info">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-  
-  
-      <div class="navbar-menu">
-        <div class="navbar-end">
-          <a href="#me" class="navbar-item">
-            About Me
-          </a>
-          <a href="#projects" class="navbar-item">
-            Projects
-          </a>
-          <a href="#skills" class="navbar-item">
-            Skills
-          </a>
-          <a href="#contact" class="navbar-item">
-            Contact
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <div class="wrapper--flex">
+    <div class="wrapper__child--flex wrapper--grid">
+      <main class="main container">
+        <header class="header container">
+          <h1 class="header__title has-text-center header__section ">Jonathan Cunanan</h1>
+          <img class="header__image is-rounded header__section" src="https://avatars1.githubusercontent.com/u/25325842?s=460&v=4" alt="picture of Jonathan Albert Cunanan">
+          <p class="header__description has-text-center header__section">
+            Web Developer, with a passion for programming. <br>
+            Constantly searching for solutions <br>
+            Learner, and will always be <br>
+            💻 ❤️
+          </p>
 
+          <nav class="navbar header__section">
+            <ul class="navbar__list has-no-bullet">
+              <li><a class="navbar-link js-navbar-link" href="#projects">
+                <p class="navbar-link__title is-hidden">Projects</p>
+                <img src="https://png.icons8.com/dusk/50/000000/edit.png" alt="pencil icon">
+              </a></li>
+              <li><a class="navbar-link js-navbar-link" href="#tools">
+                <p class="navbar-link__title is-hidden">Tools</p>
+                <img src="https://png.icons8.com/dusk/50/000000/maintenance.png" alt="wrench and screw icon">
+              </a></li>
+              <li><a class="navbar-link js-navbar-link" href="#about">
+                <p class="navbar-link__title is-hidden">About</p>
+                <img src="https://png.icons8.com/dusk/50/000000/human-head.png" alt="head icon">
+              </a></li>
+            </ul>
+          </nav>
+        </header>
 
-  <!-- bio and short description -->
-  <section id="me" class="hero is-fullheight">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-centered is-multiline">
-          <div class="column is-narrow has-text-centered">
-            <figure>
-              <img class="image is-round is-128x128" src="https://github.com/jcunanan05/fcc-portfolio/blob/master/res/profile.jpg?raw=true">
-            </figure>
-        
-            <h2 class="title">Jonathan Cunanan</h2>
-            <p class="subtitle">
-              Web Developer, with a passion for programming. <br>
-              Constantly searching for solutions <br>
-              Learner, and will always be <br>
-              💻 ❤️
+        <section id="projects" class="projects section container">
+          <h2 class="section__title">
+            Projects <i class="fas fa-pencil-alt"></i>
+          </h2>
+
+          <ul class="project__list has-no-bullet">
+            <li class="project__item">
+              <h3 class="project__title">
+                <a href="https://jcunanan05-random-quote.netlify.com/" target="_blank" rel="noopener noreferrer">Random Quote Machine</a>
+              </h3>
+              <img class="project__image" src="images/random-quote.PNG" alt="Random quote machine screenshot">
+              <p class="project__description">
+                This is project made to play with react. Had lots of fun making components, producing random colors, and keeping the data state in sync with the UI! Used CSS Framework called Bulma!
+              </p>
+            </li>
+
+            <li class="project__item">
+              <h3 class="project__title">
+                <a href="https://jcunanan05-technical-documentation.glitch.me/" target="_blank" rel="noopener noreferrer">Technical Docs Challenge</a>
+              </h3>
+              <img class="project__image" src="images/tech-doc.PNG" alt="Technical Docs Challenge screenshot">
+              <p class="project__description">
+                CSS Responsive Web Design Challenge!! Had fun doing typography, making a mobile and desktop layout, all in pure CSS! Learned flexbox, visual hierarchy, and semantics!!
+              </p>
+            </li>
+
+            <li class="project__item">
+              <h3 class="project__title">
+                <a href="https://jcunanan05-technical-documentation.glitch.me/" target="_blank" rel="noopener noreferrer">My Portfolio</a>
+              </h3>
+              <img class="project__image" src="images/portfolio.PNG" alt="Portfolio screenshot">
+              <p class="project__description">
+                Of course, where can I show my projects without this portfolio site!! Had an amazing time exploring new techonlogies like CSS grid, feature queries, also with a little bit of flexbox! 
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="tools" class="tools section container">
+          <h2 class="section__title">
+            Tools <i class="fas fa-screwdriver"></i> that I have used!
+          </h2>
+
+          <ul class="tool__list has-no-bullet js-tool__list">
+            <li class="tool__item">
+              <h3 class="tool__title is-hidden">
+                CSS3
+              </h3>
+              <img class="tool__image is-rounded" src="http://www.myiconfinder.com/uploads/iconsets/256-256-8b61de4c84033266e15317a6eb9fda2d-css3.png" alt="Icon of CSS3">
+            </li>
+          </ul>
+        </section>
+
+        <section id="about" class="about section container">
+          <h2 class="section__title">
+            About Me <i class="far fa-smile-beam"></i>
+          </h2>
+
+          <section class="about__info">
+            <h3 class="info__title">
+              <a href="https://github.com/jcunanan05" target="_blank" rel="noopener noreferrer">@jcunanan05</a>
+            </h3>
+
+            <img class="info__image is-rounded" src="https://avatars1.githubusercontent.com/u/25325842?s=460&v=4" alt="picture of Jonathan Albert Cunanan">
+
+            <p class="info__description">
+              Hi, I'm Jonathan and I study web development and I like it so much! I am always excited about techonlogies in web! 
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-  <!-- projects made -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="title is-3">Projects Made</h2>
-  
-      <div class="container js-projects-container">
-        <div class="columns">
-          <div class="column is-one-third my-projects">
-            <article>
-              <h2 class="title">
-                <a href="https://codepen.io/jcunanan05/full/eWgbwB/">fCC Tribute Page</a>
-              </h2>
-      
-              <figure>
-                <a href=""></a>
-                <img class="image" src="https://codepen.io/jcunanan05/pen/eWgbwB/image/small.png">
-    
-                <figcaption>This is a front-end exercise project that I made at freeCodeCamp using Bootstrap</figcaption>
-              </figure>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- technologies used -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="title is-3">Technologies used to build projects</h2>
-  
-      <div class="container has-text-centered">
-        <div id="toolList" class="columns is-multiline is-centered">
-          <div class="column is-narrow">
-            <figure>
-              <img class="image is-128x128" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png">
-  
-              <figcaption class="content"><strong>Node</strong></figcaption>
-            </figure>
-          </div>
-  
-  
-          <div class="column is-narrow">
-            <figure>
-              <img class="image is-128x128 is-round" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.png">
-    
-              <figcaption class="content"><strong>Bootstrap</strong></figcaption>
-            </figure>
-          </div>
-  
-  
-          <div class="column is-narrow">
-            <figure>
-              <img class="image is-128x128" src="https://jgthms.com/web-design-in-4-minutes/bulma.png">
-    
-              <figcaption class="content"><strong>Bulma</strong></figcaption>
-            </figure>
-          </div>
-
-          
-          <div class="column is-narrow">
-            <figure>
-              <img class="image is-128x128" src="https://plugins.qgis.org/static/cache/99/ec/99ec0011d70e0fe6237a4cda0166fdca.png">
-    
-              <figcaption class="content"><strong>MongoDB</strong></figcaption>
-            </figure>
-          </div>
-
-          
-          <div class="column is-narrow">
-            <figure>
-              <img class="image is-128x128" src="https://donjayamanne.gallerycdn.vsassets.io/extensions/donjayamanne/jquerysnippets/0.0.1/1474455550460/Microsoft.VisualStudio.Services.Icons.Default">
-    
-              <figcaption class="content"><strong>jQuery</strong></figcaption>
-            </figure>
-          </div>
-
-
+<<<<<<< HEAD
           <div class="column is-narrow">
             <figure>
               <img class="image is-128x128" src="https://www.shareicon.net/download/2016/07/08/117367_logo.ico">
@@ -154,112 +116,40 @@
               <figcaption class="content"><strong>React</strong></figcaption>
             </figure>
           </div>
+=======
+            <ul class="social-media__list has-no-bullet">
+              <li class="social-media__item">
+                <a href="https://github.com/jcunanan05" target="_blank" rel="noopener noreferrer">
+                  <img class="social-media__image" src="https://image.flaticon.com/icons/svg/25/25231.svg">
+                </a>
+              </li>
+
+              <li class="social-media__item">
+                <a href="https://www.linkedin.com/in/cunananjonathan/" target="_blank" rel="noopener noreferrer">
+                  <img class="social-media__image" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png">
+                </a>
+              </li>
+
+              <li class="social-media__item">
+                <a href="https://www.freecodecamp.org/jcunanan05" target="_blank" rel="noopener noreferrer">
+                  <img class="social-media__image" src="https://avatars0.githubusercontent.com/u/9892522?s=400&amp;v=4">
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container container has-text-center">
+          Copyright &copy; 2018. All rights reserved. Made by <a href="https://github.com/jcunanan05" target="_blank" rel="noopener noreferrer">Jonathan Cunanan.</a>
+>>>>>>> feature-grid
         </div>
-      </div>
+      </footer>
     </div>
-  </section>
-
-
-  <!-- more info -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="title is-3">Contact</h2>
-  
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <form>
-              <div class="field">
-                <label class="label" for="name">Name</label>
-                <div class="control">
-                  <input class="input" name="name" type="text" placeholder="Enter Name...">
-                </div>
-              </div>
-          
-              <div class="field">
-                <label class="label" for="email">Email</label>
-                <div class="control">
-                  <input class="input" name="email" type="email" placeholder="Enter email...">
-                </div>
-              </div>
-        
-        
-              <div class="field">
-                <label class="label" for="message">Message</label>
-                <div class="control">
-                  <textarea class="textarea" name="message" placeholder="Enter message..."></textarea>
-                </div>
-              </div>
-        
-        
-              <div class="control">
-                <button class="button is-primary" type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-  
-          <div class="column">
-            <p id="contactInfo" class="content is-medium">Questions, inquirires, or anything you want to share with me? Just fill this form out! :)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- social media  -->
-  <section id="social" class="section">
-    <div class="columns">
-      <div class="column content has-text-centered">
-        <h3>
-          Made by <br /> 
-          
-          <a href="https://github.com/jcunanan05" target="_blank">
-            Jonathan Cunanan
-          </a>
-        </h3>
-      </div>
-      
-
-      <div class="column">
-        <div id="socialMedia" class="columns is-multiline is-centered">
-          <div class="column is-narrow">
-            <figure>
-              <a href="https://github.com/jcunanan05" target="_blank">
-                <img class="image is-32x32" src="https://image.flaticon.com/icons/svg/25/25231.svg">
-              </a>
-            </figure>
-          </div>
-
-
-          <div class="column is-narrow">
-            <figure>
-              <a href="https://www.linkedin.com/in/cunananjonathan/" target="_blank">
-                <img class="image is-32x32" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png">
-              </a>
-            </figure>
-          </div>
-
-
-          <div class="column is-narrow">
-            <figure>
-              <a href="https://www.freecodecamp.org/jcunanan05" target="_blank">
-                <img class="image is-32x32" src="https://avatars0.githubusercontent.com/u/9892522?s=400&v=4">
-              </a>
-            </figure>
-          </div>
-        </div> 
-      </div>
-    </div>
-  </section>
-
-
-  <footer class="footer">
-    <div class="container">
-      <p class="content has-text-centered">&copy; 2018. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </body>
 </html>

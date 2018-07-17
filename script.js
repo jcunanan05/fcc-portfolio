@@ -1,162 +1,97 @@
 var Portfolio = function() {
-  var burger = document.querySelector(".navbar-burger");
-  var menu = document.querySelector(".navbar-menu");
-  var sections = document.querySelectorAll("body > section");
-  var navbarItems = document.querySelectorAll(".navbar-item");
-  var nav = document.querySelector("nav");
-  var projectsContainer = document.querySelector('.js-projects-container');
-  //don't judge, no database for now ok. =))
-  var projects = [
-    {
-      title: 'Survey Form Challenge',
-      url: 'https://codepen.io/jcunanan05/full/ERKmYg',
-      imageUrl: 'res/survey.PNG',
-      description: 'This is a Responsive Web Design Challenge, all in CSS! Enjoyed some mind-bending problems here like making a google form clone.'
+  var navbarLinks = document.querySelectorAll('.js-navbar-link');
+  var ToolList = {
+    items: [],
+    addItem: function(title, iconUrl) {
+      this.items.push({
+        title: title,
+        iconUrl: iconUrl
+      });
     },
 
-    {
-      title: 'Color Game',
-      url: 'https://codepen.io/jcunanan05/full/gzrjdq',
-      imageUrl: 'res/color-game.PNG',
-      description: 'This is a front-end game that enhances your understanding on how Red Blue and Green affects color mixes. This uses jQuery library as well as plain CSS for styling.'
-    },
-
-    {
-      title: 'fCC Random Quote Machine',
-      url: 'https://jcunanan05-random-quote.netlify.com/',
-      imageUrl: 'res/random-quote.PNG',
-      description: 'This is a front-end challenge that uses random quote API to deliver random quotes. I had fun rewriting effects, color transitions, in react!!'
+    getToolItems: function() {
+      return this.items.map(function(item) {
+        return `
+          <li class="tool__item">
+            <h3 class="tool__title has-text-center">
+              ${item.title}
+            </h3>
+            <img class="tool__image is-rounded" src="${item.iconUrl}" alt="${item.title} icon">
+          </li>
+        `;
+      }).join('');
     }
-  ];
+  }; //for Displaying Tool icons
 
-  // event listeners
-  burger.addEventListener("click", toggleBurger);
+  //add all icon images in Tool Items
+  addToolItems();
 
-  window.addEventListener("scroll", checkSlide);
-
-  //hide / show burger
-  navbarItems.forEach(navbarItem => {
-    navbarItem.addEventListener("click", hideBurger);
+  //display all tool icons
+  displayToolItems();
+  
+  navbarLinks.forEach(navbarLink => {
+    //add click events to navbarLinks for smooth scrolling
+    navbarLink.addEventListener('click', handleNavbarClick);
   });
-
-  //build projects section
-  makeProjectString();
-
-
-  function toggleBurger() {
-    menu.classList.toggle("is-active");
-  }
   
-  function hideBurger() {
-    if (menu.classList.contains("is-active")) {
-      menu.classList.remove("is-active");
+  function handleNavbarClick(e) {
+    e.preventDefault();
+    // smooth scroll!!! 
+    var href = e.currentTarget.getAttribute('href');
+    var section = document.querySelector(href);
+  
+    //scroll if section exist
+    if(section) {
+      section.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   }
-  
-  //debounce calls the function every x ms
-  function debounce(func, wait = 19, immediate = true) {
-    var timeout;
-    return function () {
-      var context = this,
-        args = arguments;
-      var later = function () {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  }
-  
-  //scrollspy for navbar-items
-  function checkSlide(e) {
-    var topPosition = window.scrollY;
-    var navbarHeight = nav.clientHeight;
-    var navbarPosition = topPosition + navbarHeight;
-    // console.log(`navbarHeight = ${navbarHeight}`);
-    //client height is the height of the element
-    //window.scrollY is the position at the top
-    //window.innerHeight is the height of the viewport
-    //offsetTop is the distance from the top to the element
-    // console.log('offsetTop: ' + section.offsetTop);
-    // console.log('scrollY: ' + topPosition);
-  
-    sections.forEach(section => {
-      var sectionId = "#" + section.getAttribute("id");
-      var sectionHeight = section.offsetTop + section.clientHeight;
-      var sectionIsPassingBy = 
-        navbarPosition >= section.offsetTop && 
-        navbarPosition <= sectionHeight;
-      var navbarItem = document.querySelector(`a[href="${sectionId}"]`);
-  
-      // deactiviate it here for a test before any activation
-      navbarItem ? navbarItem.classList.remove("is-active") : "";
-  
-      if (sectionIsPassingBy) {
-        //add is-active class to a navbar-item
-        //execute if navbarItem exists
-        navbarItem ? navbarItem.classList.add("is-active") : "";
-      }
-    });
+
+  function addToolItems() {
+    ToolList.addItem('CSS3', 'http://www.myiconfinder.com/uploads/iconsets/256-256-8b61de4c84033266e15317a6eb9fda2d-css3.png');
+
+    ToolList.addItem('HTML5', 'http://www.iconarchive.com/download/i73026/cornmanthe3rd/plex/Other-html-5.ico');
+
+    ToolList.addItem('Node JS', 'https://www.shareicon.net/data/256x256/2015/09/11/99371_javascript_512x512.png');
+
+    ToolList.addItem('React', 'https://www.shareicon.net/download/2016/07/08/117367_logo.ico');
+
+    ToolList.addItem('Bulma', 'https://jgthms.com/web-design-in-4-minutes/bulma.png');
+
+    ToolList.addItem('Bootstrap', 'https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.png');
+
+    ToolList.addItem('JQuery', 'https://donjayamanne.gallerycdn.vsassets.io/extensions/donjayamanne/jquerysnippets/0.0.1/1474455550460/Microsoft.VisualStudio.Services.Icons.Default');
+
+    ToolList.addItem('MongoDB', 'https://plugins.qgis.org/static/cache/99/ec/99ec0011d70e0fe6237a4cda0166fdca.png');
+
+    ToolList.addItem('VS Code', 'http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/visual-studio-code-icon.png');
+
+    ToolList.addItem('Sublime Text', 'https://upload.wikimedia.org/wikipedia/en/d/d2/Sublime_Text_3_logo.png');
+
+    ToolList.addItem('Git', 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/256px-Git_icon.svg.png');
+
+    ToolList.addItem('Github', 'https://www.shareicon.net/download/2016/10/12/843742_media.ico');
+
+    ToolList.addItem('ITerm', 'http://icons.iconarchive.com/icons/froyoshark/enkel/256/iTerm-icon.png');
+
+    ToolList.addItem('Firefox', 'https://i2.wp.com/prosoftfull.com/wp-content/uploads/2018/06/mozilla-firefox-62-0-developer-edition-beta-1-free-download.png?resize=256%2C256&ssl=1');
+    
+    ToolList.addItem('Chrome', 'https://png.icons8.com/cotton/2x/chrome.png')
+
+    ToolList.addItem('Coffee', 'http://icons.iconarchive.com/icons/aha-soft/food/256/coffee-icon.png');
   }
 
-  //build the projectsContainer
-  function makeProjectString() {
-    var projectsString = [];
-    var rowString = [];
+  function displayToolItems() {
+    var toolList = document.querySelector('.js-tool__list');
 
-    //loop the project Object
-    projects.forEach((project, i) => {
-      // for every 3 proj new line
-      var newColumn = ((i + 1) % 3) === 0;
-  
-      //loop all column
-      rowString.push(`
-        ${makeColumn(project)}
-      `);
-
-      //if new column
-      if(newColumn) {
-        projectsString.push(`<div class="columns">${rowString.join('')}</div>`);
-        //reset rowString
-        rowString = [];
-      }
-
-      //if end of array
-      if(i === projects.length - 1) {
-        projectsString.push(`<div class="columns">${rowString.join('')}</div>`);
-      }
-    });
-
-    //build the string
-    projectsContainer.innerHTML = `
-      ${projectsString.join('')}
+    toolList.innerHTML = `
+      ${ToolList.getToolItems()}
     `;
   }
+}
 
-  //get object and return a html string of project
-  function makeColumn(project) {
-    return `
-      <div class="column is-one-third my-projects">
-        <article>
-          <h2 class="title">
-            <a href="${project.url}" target="_blank">${project.title}</a>
-          </h2>
+Portfolio();
 
-          <figure>
-            <a href="${project.url}"></a>
-            <img class="image" src="${project.imageUrl}">
-
-            <figcaption class="has-text-centered">${project.description}</figcaption>
-          </figure>
-        </article>
-      </div>
-    `;
-  }
-};
-
-
-//run scripts 
-var project = Portfolio();
+// document.addEventListener('DOMContentLoaded', function() {
+// });

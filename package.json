@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "Hello this is my portfolio code. Lets have fun!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --port 7777 --files 'css/*.css, *.html, *.js, !node_modules/**/*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcunanan05/portfolio.git"
+  },
+  "author": "Jonathan Albert Cunanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcunanan05/portfolio/issues"
+  },
+  "homepage": "https://github.com/jcunanan05/portfolio",
+
+  "devDependencies": {
+    "browser-sync": "2.24.5"
+  }
+}
