@@ -43,7 +43,8 @@ var Portfolio = function() {
     //scroll if section exist
     if(section) {
       section.scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
+        block: 'start'
       });
     }
   }
