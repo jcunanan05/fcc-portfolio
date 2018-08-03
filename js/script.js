@@ -50,9 +50,9 @@ var Portfolio = function() {
   }
 
   function addToolItems() {
-    ToolList.addItem('CSS3', 'http://www.myiconfinder.com/uploads/iconsets/256-256-8b61de4c84033266e15317a6eb9fda2d-css3.png');
+    ToolList.addItem('CSS3', 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png');
 
-    ToolList.addItem('HTML5', 'http://www.iconarchive.com/download/i73026/cornmanthe3rd/plex/Other-html-5.ico');
+    ToolList.addItem('HTML5', 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png');
 
     ToolList.addItem('Node JS', 'https://www.shareicon.net/data/256x256/2015/09/11/99371_javascript_512x512.png');
 
@@ -66,21 +66,27 @@ var Portfolio = function() {
 
     ToolList.addItem('MongoDB', 'https://plugins.qgis.org/static/cache/99/ec/99ec0011d70e0fe6237a4cda0166fdca.png');
 
-    ToolList.addItem('VS Code', 'http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/visual-studio-code-icon.png');
+    ToolList.addItem('VS Code', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/241px-Visual_Studio_Code_1.18_icon.svg.png');
 
     ToolList.addItem('Sublime Text', 'https://upload.wikimedia.org/wikipedia/en/d/d2/Sublime_Text_3_logo.png');
 
-    ToolList.addItem('Git', 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/256px-Git_icon.svg.png');
+    ToolList.addItem('Git', 'https://www.linuxjournal.com/sites/default/files/styles/360_250/public/nodeimage/story/git-icon.png?itok=w7zB9vuE');
 
     ToolList.addItem('Github', 'https://www.shareicon.net/download/2016/10/12/843742_media.ico');
 
-    ToolList.addItem('ITerm', 'http://icons.iconarchive.com/icons/froyoshark/enkel/256/iTerm-icon.png');
+    ToolList.addItem('ITerm', 'https://upload.wikimedia.org/wikipedia/commons/5/57/ITerm2_v3_icon.png');
 
-    ToolList.addItem('Firefox', 'https://i2.wp.com/prosoftfull.com/wp-content/uploads/2018/06/mozilla-firefox-62-0-developer-edition-beta-1-free-download.png?resize=256%2C256&ssl=1');
+    // ToolList.addItem('Firefox', 'https://i2.wp.com/prosoftfull.com/wp-content/uploads/2018/06/mozilla-firefox-62-0-developer-edition-beta-1-free-download.png?resize=256%2C256&ssl=1');
     
-    ToolList.addItem('Chrome', 'https://png.icons8.com/cotton/2x/chrome.png')
+    ToolList.addItem('Chrome DevTools', 'https://png.icons8.com/cotton/2x/chrome.png');
 
     ToolList.addItem('Coffee', 'http://icons.iconarchive.com/icons/aha-soft/food/256/coffee-icon.png');
+
+    ToolList.addItem('SASS', 'https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg');
+
+    ToolList.addItem('npm', 'https://cdn.iconscout.com/public/images/icon/free/png-512/npm-logo-3dc2529e5720fdb2-512x512.png');
+
+    ToolList.addItem('yarn', 'https://cdn.rawgit.com/yarnpkg/assets/master/yarn-kitten-circle.png');
   }
 
   function displayToolItems() {
