@@ -50,9 +50,9 @@ var Portfolio = function() {
   }
 
   function addToolItems() {
-    ToolList.addItem('CSS3', 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png');
+    ToolList.addItem('CSS3', 'https://png.icons8.com/color/480/000000/css3.png');
 
-    ToolList.addItem('HTML5', 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png');
+    ToolList.addItem('HTML5', 'https://png.icons8.com/color/480/000000/html-5.png');
 
     ToolList.addItem('Node JS', 'https://www.shareicon.net/data/256x256/2015/09/11/99371_javascript_512x512.png');
 
